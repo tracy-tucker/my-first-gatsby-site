@@ -7,3 +7,5 @@
  building-block component - smaller components that represent just a part of a page's UI (instead of an entire page). (Navbar, Sidebar, etc.)
 
  pre-built component - maintained by another package (such as Gatsby). You can import it and use it without knowing what's under the hood (Link)
+
+ Gatsby is already configured with GraphQL and CSS Modules
