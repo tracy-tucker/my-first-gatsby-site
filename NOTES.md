@@ -13,3 +13,7 @@
  Plugin Notes:
  - install it.
  - add it to the `gatsby-config.js` file
+
+ GraphQL Notes:
+ useStateQuery -> a pre-defined hook that lets you add GraphQL queries to building-block components. It takes 1 parameter: a templated string. It returns the requested data, which you can then store in a variable and use throughout the component.
+ You can only call useStaticQuery once per file. If you need multiple fields, you can add them all into a single query
