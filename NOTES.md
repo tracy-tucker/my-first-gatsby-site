@@ -9,3 +9,7 @@
  pre-built component - maintained by another package (such as Gatsby). You can import it and use it without knowing what's under the hood (Link)
 
  Gatsby is already configured with GraphQL and CSS Modules
+
+ Plugin Notes:
+ - install it.
+ - add it to the `gatsby-config.js` file
