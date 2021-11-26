@@ -24,15 +24,15 @@
 
  - gatsby-source-filesystem -- lets you query data ABOUT the files,  but doesn't let you use the data INSIDE the files themselves.
 
- - gatsby-plugin-mdx -- a transformer plugin! This takes the raw content from source plugins and TRANSFORMS it into something usable. gatsby-plugin-mdx specifically allows Markdown and JSX along side text content. gatsby-plugin-mdx will transform *file* nodes that have the `.mdx` extension into MDX nodes, which have a different set of fields that you can query using GraphQL.
+ - gatsby-plugin-mdx -- a transformer plugin! This takes the raw content from source plugins and *TRANSFORMS* it into something usable. gatsby-plugin-mdx specifically allows Markdown and JSX along side text content. gatsby-plugin-mdx will transform **file** nodes that have the `.mdx` extension into MDX nodes, which have a different set of fields that you can query using GraphQL.
 
  ## GraphQL Notes:
- useStaticQuery -> a pre-defined hook that lets you add GraphQL queries to BUILDING-BLOCK components. useStaticQuery allows you to define the query INSIDE the component. It takes 1 parameter: a templated string. It returns the requested data, which you can then store in a variable and use throughout the component.
+ useStaticQuery -> a pre-defined hook that lets you add GraphQL queries to BUILDING-BLOCK components. useStaticQuery allows you to define the query *INSIDE* the component. It takes 1 parameter: a templated string. It returns the requested data, which you can then store in a variable and use throughout the component.
  You can only call useStaticQuery once per file. If you need multiple fields, you can add them all into a single query.
 
- graphql -> in PAGE components, the useStaticQuery hook is not needed. You will do a basic page query using graphql alone. Also, your Graphql query needs to be defined OUTSIDE of the page component. Doing this will create a prop called `data`, which will hold the resulting data from the Graphql query.
+ graphql -> in PAGE components, the useStaticQuery hook is not needed. You will do a basic page query using graphql alone. Also, your Graphql query needs to be defined *OUTSIDE* of the page component. Doing this will create a prop called `data`, which will hold the resulting data from the Graphql query.
 
- nodes -> In Graphql, inside the data layouer, information is stored in objects called *nodes*. Nodes are the smalled form unit of data in the data layer. Different source plugins create different types of nodes, each with their own properties. EX: gatsby-source-filesystem creates *file* nodes.
+ nodes -> In Graphql, inside the data layouer, information is stored in objects called **nodes**. Nodes are the smalled form unit of data in the data layer. Different source plugins create different types of nodes, each with their own properties. EX: gatsby-source-filesystem creates **file** nodes.
 
  ## MDX
  MDX = Markdown Language
@@ -48,4 +48,6 @@
  `MDXRenderer` component = for processing and displaying MDX content
 
  ## Gatsby File System Route API
+ - Gatsby's File System Route API defines a special syntax for naming the files in your `src/pages` directory, which lets you dynaically create new pages for your site based on a **collection** of nodes in the data layer.
  
+ EX: Your site had `Product` nodes in the data layer. You could use the File System Route API to create one product page template component. When your site renders, Gatsby will combine the page template with the data for each `Product` node and generate a new page for each product. If you need to make changes to the product page, you'll only have to edit the template component.
