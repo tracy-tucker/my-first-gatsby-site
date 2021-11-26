@@ -15,7 +15,7 @@
  - add it to the `gatsby-config.js` file
 
  GraphQL Notes:
- useStaticQuery -> a pre-defined hook that lets you add GraphQL queries to BUILDING-BLOCK components. It takes 1 parameter: a templated string. It returns the requested data, which you can then store in a variable and use throughout the component.
+ useStaticQuery -> a pre-defined hook that lets you add GraphQL queries to BUILDING-BLOCK components. useStaticQuery allows you to define the query INSIDE the component. It takes 1 parameter: a templated string. It returns the requested data, which you can then store in a variable and use throughout the component.
  You can only call useStaticQuery once per file. If you need multiple fields, you can add them all into a single query.
 
- graphql -> in PAGE components, the useStaticQuery hook is not needed. You will do a basic page query using graphql alone.
+ graphql -> in PAGE components, the useStaticQuery hook is not needed. You will do a basic page query using graphql alone. Also, your Graphql query needs to be defined OUTSIDE of the page component. Doing this will create a prop called `data`, which will hold the resulting data from the Graphql query. 
