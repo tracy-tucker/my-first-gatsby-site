@@ -60,3 +60,5 @@
  3. Create a new page component in your `src/pages` directory using the following naming convention: `{nodeType.field}.js`. DON'T FORGET to include the curly braces in your filenames to indicate the dynamic part of the route!
 
  EX: You want to create a separate page for each `Product` node, and you want to use the product's `name` field in the URL. You would create a new file at `src/pages/{Product.name}.js`. Then Gatsby would create those pages at routes like `/water-bottle` or `/sweatshirt` or `/notebook`.
+
+ **SIDENOTE** `gatsby-plugin-mdx` automatically adds a `slug` field to each MDX node, which contains a string of the filename for the `.mdx` file.
