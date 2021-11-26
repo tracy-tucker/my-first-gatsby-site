@@ -10,13 +10,15 @@
 
  Gatsby is already configured with GraphQL and CSS Modules
 
- Plugins Used:
+ ## Plugins Used:
  - gatsby-plugin-image - responsive images
  - gatsby-plugin-sharp - dependency for gatsby-plugin-image
  - gatsby-source-filesystem - creates file nodes from files
- - 
+ - gatsby-mdx-plugin - transformer plugin. see notes below.
+ - @mdx-js/mdx - mdx plugin dependency
+ - @mdx-js/react - mdx plugin dependency
 
- Plugin Notes:
+ ### Plugin Notes:
  - install it.
  - add it to the `gatsby-config.js` file
 
@@ -40,3 +42,6 @@
  datePublished: "2021-07-12"
  auther; "#1 Red Panda Fan"
  ---
+
+ `allMdx` and `mdx` = fields for GraphQL queries
+ `MDXRenderer` component = for processing and displaying MDX content
