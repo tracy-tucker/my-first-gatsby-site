@@ -22,11 +22,11 @@
  - install it.
  - add it to the `gatsby-config.js` file
 
- gatsby-source-filesystem -- lets you query data ABOUT the files,  but doesn't let you use the data INSIDE the files themselves.
+ - gatsby-source-filesystem -- lets you query data ABOUT the files,  but doesn't let you use the data INSIDE the files themselves.
 
- gatsby-plugin-mdx -- a transformer plugin! This takes the raw content from source plugins and TRANSFORMS it into something usable. gatsby-plugin-mdx specifically allows Markdown and JSX along side text content. gatsby-plugin-mdx will transform *file* nodes that have the `.mdx` extension into MDX nodes, which have a different set of fields that you can query using GraphQL.
+ - gatsby-plugin-mdx -- a transformer plugin! This takes the raw content from source plugins and TRANSFORMS it into something usable. gatsby-plugin-mdx specifically allows Markdown and JSX along side text content. gatsby-plugin-mdx will transform *file* nodes that have the `.mdx` extension into MDX nodes, which have a different set of fields that you can query using GraphQL.
 
- GraphQL Notes:
+ ## GraphQL Notes:
  useStaticQuery -> a pre-defined hook that lets you add GraphQL queries to BUILDING-BLOCK components. useStaticQuery allows you to define the query INSIDE the component. It takes 1 parameter: a templated string. It returns the requested data, which you can then store in a variable and use throughout the component.
  You can only call useStaticQuery once per file. If you need multiple fields, you can add them all into a single query.
 
@@ -34,6 +34,7 @@
 
  nodes -> In Graphql, inside the data layouer, information is stored in objects called *nodes*. Nodes are the smalled form unit of data in the data layer. Different source plugins create different types of nodes, each with their own properties. EX: gatsby-source-filesystem creates *file* nodes.
 
+ ## MDX
  MDX = Markdown Language
  Frontmatter = additional metadata. Not rendered.
  Frontmatter example:
@@ -45,3 +46,6 @@
 
  `allMdx` and `mdx` = fields for GraphQL queries
  `MDXRenderer` component = for processing and displaying MDX content
+
+ ## Gatsby File System Route API
+ 
