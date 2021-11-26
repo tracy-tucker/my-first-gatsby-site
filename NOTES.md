@@ -1,3 +1,5 @@
+ # Notes on Gatsby
+
  gatsby new - new project
 
  gatsby develop - launch local server
@@ -51,3 +53,10 @@
  - Gatsby's File System Route API defines a special syntax for naming the files in your `src/pages` directory, which lets you dynaically create new pages for your site based on a **collection** of nodes in the data layer.
 
  EX: Your site had `Product` nodes in the data layer. You could use the File System Route API to create one product page template component. When your site renders, Gatsby will combine the page template with the data for each `Product` node and generate a new page for each product. If you need to make changes to the product page, you'll only have to edit the template component.
+
+ ### How to create a collection route
+ 1. Decide what *type* of node you want to create pages from
+ 2. Choose which *field* on that node to use in the route (the URL) for your pages
+ 3. Create a new page component in your `src/pages` directory using the following naming convention: `{nodeType.field}.js`. DON'T FORGET to include the curly braces in your filenames to indicate the dynamic part of the route!
+
+ EX: You want to create a separate page for each `Product` node, and you want to use the product's `name` field in the URL. You would create a new file at `src/pages/{Product.name}.js`. Then Gatsby would create those pages at routes like `/water-bottle` or `/sweatshirt` or `/notebook`.
