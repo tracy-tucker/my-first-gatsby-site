@@ -35,8 +35,8 @@
  nodes -> In Graphql, inside the data layouer, information is stored in objects called **nodes**. Nodes are the smalled form unit of data in the data layer. Different source plugins create different types of nodes, each with their own properties. EX: gatsby-source-filesystem creates **file** nodes.
 
  ## MDX
- MDX = Markdown Language
- Frontmatter = additional metadata. Not rendered.
+ MDX - Markdown Language
+ Frontmatter - additional metadata. Not rendered.
  Frontmatter example:
  ---
  name: "Fun Facts about Red Pandas"
@@ -49,5 +49,5 @@
 
  ## Gatsby File System Route API
  - Gatsby's File System Route API defines a special syntax for naming the files in your `src/pages` directory, which lets you dynaically create new pages for your site based on a **collection** of nodes in the data layer.
- 
+
  EX: Your site had `Product` nodes in the data layer. You could use the File System Route API to create one product page template component. When your site renders, Gatsby will combine the page template with the data for each `Product` node and generate a new page for each product. If you need to make changes to the product page, you'll only have to edit the template component.
