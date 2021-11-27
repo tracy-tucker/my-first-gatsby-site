@@ -75,7 +75,7 @@
 
  **SIDENOTE** Gatsby's File System Route API automatically adds some props into the page template: `id` for the data layer node used to create the page, and the *field* you used to create the dynamic part of the route (ie, `slug` field).
 
- ### How to create a collection route
+ ### File System Rout API - How to create a collection route
  1. Decide what *type* of node you want to create pages from
  2. Choose which *field* on that node to use in the route (the URL) for your pages
  3. Create a new page component in your `src/pages` directory using the following naming convention: `{nodeType.field}.js`. DON'T FORGET to include the curly braces in your filenames to indicate the dynamic part of the route!
@@ -85,3 +85,7 @@
  So, for the sake of this project, the `nodeType` is `mdx` and the `field` is `slug`, thus the blog page created in the `src/pages` directory is `src/pages/{mdx.slug}.js`.
 
  **SIDENOTE** `gatsby-plugin-mdx` automatically adds a `slug` field to each MDX node, which contains a string of the filename for the `.mdx` file. So, to create a dynamic blog page, create a new comp like this: `src/pages/{mdx.slug}.js` This will dynamically pull the slug info for the page wihin the URL path.
+
+ ## gatsby-plugin-image
+ - StaticImage -> For static image sources, the source for your image is always going to be the same every time the component renders.
+ - GatsbyImage -> For dynamic image source, the image source gets passed in as a prop.
