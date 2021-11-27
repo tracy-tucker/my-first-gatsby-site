@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 
 // {data} is coming from export const query. The Graphql query creates the data prop
 const BlogPage = ({data}) => {

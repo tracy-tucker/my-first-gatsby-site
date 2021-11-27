@@ -36,6 +36,24 @@
 
  nodes -> In Graphql, inside the data layouer, information is stored in objects called **nodes**. Nodes are the smalled form unit of data in the data layer. Different source plugins create different types of nodes, each with their own properties. EX: gatsby-source-filesystem creates **file** nodes.
 
+ query variables -> a way to send extra data along with your request. You can write dynamic queries that return different data based on the values you pass in.
+ Inside GraphiQL: On the left, you build out your query using filter variables. The middle is where your new query will appear. The bottom, titles **Variable Queries** is where you *test* your query filter.
+
+ EX:
+ ```
+ // top-middle GraphiQL query
+ query MyQuery($slug: String) {
+     mdx(slug: {eq: $slug}) {
+         frontmatter {
+             title
+         }
+     }
+ }
+
+ // bottom-middle "Query Variables" used for testing
+ {"slug": "married-by-elvis"}
+ ```
+
  ## MDX
  MDX - Markdown Language
  Frontmatter - additional metadata. Not rendered.
