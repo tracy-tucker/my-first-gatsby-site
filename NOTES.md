@@ -73,6 +73,8 @@
 
  EX: Your site had `Product` nodes in the data layer. You could use the File System Route API to create one product page template component. When your site renders, Gatsby will combine the page template with the data for each `Product` node and generate a new page for each product. If you need to make changes to the product page, you'll only have to edit the template component.
 
+ **SIDENOTE** Gatsby's File System Route API automatically adds some props into the page template: `id` for the data layer node used to create the page, and the *field* you used to create the dynamic part of the route (ie, `slug` field).
+
  ### How to create a collection route
  1. Decide what *type* of node you want to create pages from
  2. Choose which *field* on that node to use in the route (the URL) for your pages
