@@ -61,4 +61,4 @@
 
  EX: You want to create a separate page for each `Product` node, and you want to use the product's `name` field in the URL. You would create a new file at `src/pages/{Product.name}.js`. Then Gatsby would create those pages at routes like `/water-bottle` or `/sweatshirt` or `/notebook`.
 
- **SIDENOTE** `gatsby-plugin-mdx` automatically adds a `slug` field to each MDX node, which contains a string of the filename for the `.mdx` file.
+ **SIDENOTE** `gatsby-plugin-mdx` automatically adds a `slug` field to each MDX node, which contains a string of the filename for the `.mdx` file. So, to create a dynamic blog page, create a new comp like this: `src/pages/{mdx.slug}.js` This will dynamically pull the slug info for the page wihin the URL path.
