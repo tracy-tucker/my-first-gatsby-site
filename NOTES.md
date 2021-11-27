@@ -53,6 +53,7 @@
  // bottom-middle "Query Variables" used for testing
  {"slug": "married-by-elvis"}
  ```
+ **SIDENOTE** Query variables can only be used inside of page queries, **NOT** with `useStaticQuery`.
 
  ## MDX
  MDX - Markdown Language
