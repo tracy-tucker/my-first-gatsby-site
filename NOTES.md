@@ -19,6 +19,7 @@
  - gatsby-mdx-plugin - transformer plugin. see notes below.
  - @mdx-js/mdx - mdx plugin dependency
  - @mdx-js/react - mdx plugin dependency
+ - gatsby-transformer-sharp - looks for any `file` nodes that end with an image extension and creates an `ImageSharp` node for that file.
 
  ### Plugin Notes:
  - install it.
